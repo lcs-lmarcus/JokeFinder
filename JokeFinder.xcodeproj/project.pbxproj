@@ -13,6 +13,8 @@
 		AE103B602D9B132A0014D331 /* JokeFinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE103B5B2D9B132A0014D331 /* JokeFinderApp.swift */; };
 		AE103B652D9B14280014D331 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE103B642D9B14240014D331 /* Joke.swift */; };
 		AE103B672D9B14820014D331 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE103B662D9B14720014D331 /* JokeViewModel.swift */; };
+		AE103B692D9CBF1E0014D331 /* FavouriteJokerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE103B682D9CBF110014D331 /* FavouriteJokerView.swift */; };
+		AE103B6B2D9CBF430014D331 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE103B6A2D9CBF3B0014D331 /* LandingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		AE103B5B2D9B132A0014D331 /* JokeFinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeFinderApp.swift; sourceTree = "<group>"; };
 		AE103B642D9B14240014D331 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		AE103B662D9B14720014D331 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		AE103B682D9CBF110014D331 /* FavouriteJokerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteJokerView.swift; sourceTree = "<group>"; };
+		AE103B6A2D9CBF3B0014D331 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				AE103B5A2D9B132A0014D331 /* JokeView.swift */,
+				AE103B682D9CBF110014D331 /* FavouriteJokerView.swift */,
+				AE103B6A2D9CBF3B0014D331 /* LandingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,10 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE103B6B2D9CBF430014D331 /* LandingView.swift in Sources */,
 				AE103B672D9B14820014D331 /* JokeViewModel.swift in Sources */,
 				AE103B5F2D9B132A0014D331 /* JokeView.swift in Sources */,
 				AE103B602D9B132A0014D331 /* JokeFinderApp.swift in Sources */,
 				AE103B652D9B14280014D331 /* Joke.swift in Sources */,
+				AE103B692D9CBF1E0014D331 /* FavouriteJokerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
