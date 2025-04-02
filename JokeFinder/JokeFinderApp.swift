@@ -5,13 +5,24 @@
 //  Created by Marcus Li on 2025-03-31.
 //
 
-import SwiftUI
 
+import SwiftUI
+ 
 @main
-struct JokeFinderApp: App {
+struct JokeFinderLessonApp: App {
+    
+    // MARK: Stored properties
+ 
+    // Create the view model
+    @State var viewModel = JokeViewModel()
+    
+    // MARK: Computed properties
     var body: some Scene {
         WindowGroup {
-            LandingView()
+            JokeView()
+                .environment(viewModel)
         }
     }
+    
 }
+

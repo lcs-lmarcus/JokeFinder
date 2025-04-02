@@ -10,9 +10,9 @@ import SwiftUI
 struct JokeView: View {
     
     // MARK: Stored properties
-    
-    // Create the view model (temporarily show the default joke)
-    @State var viewModel = JokeViewModel()
+    // Access the view model from the environment
+    @Environment(JokeViewModel.self) var viewModel
+
     
     // Controls punchline visibility
     @State var punchlineOpacity = 0.0
@@ -128,5 +128,6 @@ struct JokeView: View {
  
 #Preview {
     JokeView()
+        .environment(JokeViewModel())
 }
 
