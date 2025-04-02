@@ -18,24 +18,39 @@ struct FavouriteJokesView: View {
 
     var body: some View {
         NavigationStack {
-            VStack {
-                // When there are no saved jokes...
-                if viewModel.favouriteJokes.isEmpty {
-                    
-                    // ... show an appropriate message
-                    ContentUnavailableView(
-                        "No favourite jokes",
-                        systemImage: "heart.slash",
-                        description: Text("See if a new joke might tickle your funny bone!")
-                    )
-                    
-                } else {
-                    
-                    // ...otherwise, show how many jokes have been saved
-                    Text("There are \(viewModel.favouriteJokes.count) saved jokes.")
-                    
-                }
+            ZStack {
+                // Background layer
+                Color.forFavouriteJokes
+                    .ignoresSafeArea()
+                 
+                // Foreground layer
+                VStack {
+                    // When there are no saved jokes...
+                    if viewModel.favouriteJokes.isEmpty {
+                        
+                        // ... show an appropriate message
+                        ContentUnavailableView(
+                            "No favourite jokes",
+                            systemImage: "heart.slash",
+                            description: Text("See if a new joke might tickle your funny bone!")
+                        )
+                        
+                    } else {
+                        
+                        // Show a scrollable list of saved jokes
+                        List(viewModel.favouriteJokes) { currentJoke in
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(currentJoke.setup ?? "")
+                                Text(currentJoke.punchline ?? "")
+                                    .italic()
+                            }
+                        }
+                        .listStyle(.plain)
 
+                        
+                    }
+
+                }
             }
             .navigationTitle("Favourites")
         }
